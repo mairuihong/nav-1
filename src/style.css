@@ -19,7 +19,7 @@ input {
   outline: none;
 }
 body {
-  background-color: #eee;
+  background-color: #691f13;
 }
 .globalHeader {
   margin: 0 20px;
@@ -32,62 +32,96 @@ body {
   }
 }
 .searchForm {
+  border-radius: 24px;
+  height: 48px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  box-shadow: 0px 0px 10px 2px #ccc;
 }
 .searchForm .word {
   width: 100%;
-  padding: 0 10px;
-  margin-right: 20px;
-  border-radius: 16px;
-  border: none;
-  box-shadow: 0px 0px 10px 2px #ccc;
-}
-.searchForm .but {
-  border-radius: 16px;
-  box-shadow: 0px 0px 8px 2px #ccc;
-}
-.searchForm .but > button {
-  white-space: nowrap;
+  height: 100%;
   font-size: 16px;
-  color: #fff;
-  background-color: #00b5e5;
-  padding: 6px 14px;
+  padding: 10px 5px;
+  margin-left: 24px;
   border: none;
-  border-radius: 16px;
+}
+.searchForm .icon-wrapper {
+  height: 100%;
+  padding: 0 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchForm .icon {
+  font-size: 24px;
+}
+.searchForm .btn {
+  height: 100%;
+  border-radius: 0 24px 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchForm .btn > button {
+  height: 100%;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 16px;
+  color: #00a1d6;
+  padding: 0px 20px;
+  border: none;
+  border-radius: 0 24px 24px 0;
+  background: white;
+}
+.searchForm .btn > button:hover {
+  color: #33b4de;
 }
 .globalMain {
   margin: 0 20px;
 }
 @media (min-width: 500px) {
   .globalMain {
-    max-width: 900px;
+    max-width: 905px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 .siteList {
+  padding: 0 16px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: center;
 }
 .siteList li {
   margin-bottom: 12px;
+  border-radius: 16px;
+  background: #eeeeee;
 }
 @media (min-width: 500px) {
   .siteList {
+    padding: 0;
     margin-left: 0;
     margin-right: -25px;
     justify-content: flex-start;
+    align-content: center;
   }
   .siteList li {
     margin-bottom: 12px;
     margin-right: 25px;
+    background: transparent;
+  }
+  .siteList li:hover {
+    background: rgba(255, 255, 255, 0.4);
   }
 }
 .siteList .site {
-  width: 160px;
-  background-color: #fff;
+  width: 130px;
+  background: #eeeeee;
   border-radius: 16px;
   padding: 16px 0;
   display: flex;
@@ -97,31 +131,59 @@ body {
   position: relative;
   cursor: pointer;
 }
+@media (min-width: 500px) {
+  .siteList .site {
+    background: transparent;
+  }
+}
 .siteList .site > .logo {
-  width: 64px;
-  height: 64px;
-  font-size: 64px;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 4px;
+  font-size: 32px;
+  background: #eeeeee;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
 }
 .siteList .site > .link {
+  color: white;
   font-size: 14px;
-  max-width: 120px;
+  max-width: 80px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .siteList .addButton {
-  width: 160px;
-  background-color: #fff;
+  width: 130px;
+  background: transparent;
   border-radius: 16px;
   padding: 16px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  cursor: pointer;
+}
+.siteList .addButton .text {
+  color: white;
+}
+.siteList .addButton .icon-wrapper{
+  width: 48px;
+  height: 48px;
+  margin-bottom: 4px;
+  background: #eeeeee;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+.siteList .addButton .icon-wrapper .icon{
+  width: 32px;
+  height: 32px;
 }
 .siteList .site > .close {
   position: absolute;

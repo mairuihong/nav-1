@@ -4,11 +4,14 @@ const x = localStorage.getItem("x");
 const xObject = JSON.parse(x);
 const hashMap = xObject || [
   { logo: "B", url: "https://www.bilibili.com/" },
+  { logo: "B", url: "https://www.bootcdn.cn/" },
   { logo: "C", url: "https://csstriggers.com/" },
   { logo: "D", url: "https://developer.mozilla.org/zh-CN/" },
+  { logo: "G", url: "https://github.com/" },
   { logo: "I", url: "http://www.iciba.com/" },
   { logo: "I", url: "https://www.iconfont.cn/" },
   { logo: "J", url: "http://js.jirengu.com/?html,output" },
+  { logo: "J", url: "https://zh.javascript.info/" },
   { logo: "X", url: "https://xiedaimala.com/" },
   { logo: "P", url: "https://pixso.design/" },
 ];
@@ -53,7 +56,6 @@ $(".addButton").on("click", () => {
   if (url.indexOf("http") !== 0) {
     url = "https://" + url;
   }
-  console.log(url);
   hashMap.push({
     logo: simplifyUrl(url)[0],
     url: url,
@@ -61,20 +63,7 @@ $(".addButton").on("click", () => {
   render();
 });
 
-/* window.onbeforeunload = () => {
+ window.onbeforeunload = () => {
   const string = JSON.stringify(hashMap);
   localStorage.setItem("x", string);
-}; */
-
-/* $(document).on("keypress", (e) => {
-  const { key } = e; // const key = e.key
-  for (let i = 0; i < hashMap.length; i++) {
-    if (hashMap[i].logo.toLowerCase() === key) {
-      window.open(hashMap[i].url);
-    }
-  }
-}); // 首字母相同的网址，只会打开第一个网址
-
-$(".word").on("keypress", (e) => {
-  e.stopPropagation();
-}); */
+};
