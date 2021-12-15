@@ -1,0 +1,217 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+input {
+  outline: none;
+}
+body {
+  background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+  background-blend-mode: normal, lighten, soft-light;
+}
+.globalHeader {
+  margin: 0 20px;
+  padding: 20px 0;
+}
+@media (min-width: 500px) {
+  .globalHeader {
+    max-width: 450px;
+    margin: 60px auto 40px;
+  }
+}
+.searchForm {
+  border-radius: 24px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+.searchForm .word {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  padding: 10px 5px;
+  margin-left: 24px;
+  border: none;
+}
+.searchForm .icon-wrapper {
+  height: 100%;
+  padding: 0 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchForm .icon {
+  font-size: 24px;
+}
+.searchForm .btn {
+  height: 100%;
+  border-radius: 0 24px 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchForm .btn > button {
+  height: 100%;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 16px;
+  color: #00a1d6;
+  padding: 0px 20px;
+  border: none;
+  border-radius: 0 24px 24px 0;
+  background: white;
+}
+.searchForm .btn > button:hover {
+  color: #33b4de;
+}
+.globalMain {
+  margin: 0 20px;
+}
+@media (min-width: 500px) {
+  .globalMain {
+    max-width: 905px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.siteList {
+  padding: 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+.siteList li {
+  margin-bottom: 12px;
+  border-radius: 16px;
+  background: #eeeeee;
+}
+@media (min-width: 500px) {
+  .siteList {
+    padding: 0;
+    margin-left: 0;
+    margin-right: -25px;
+    justify-content: flex-start;
+    align-content: center;
+  }
+  .siteList li {
+    margin-bottom: 12px;
+    margin-right: 25px;
+    background: transparent;
+  }
+  .siteList li:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+}
+.siteList .site {
+  width: 130px;
+  background: #eeeeee;
+  border-radius: 16px;
+  padding: 16px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+@media (min-width: 500px) {
+  .siteList .site {
+    background: transparent;
+  }
+}
+.siteList .site > .logo {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 4px;
+  font-size: 32px;
+  background: #eeeeee;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+.siteList .site > .link {
+  color: white;
+  font-size: 14px;
+  max-width: 80px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.siteList .addButton {
+  width: 130px;
+  background: transparent;
+  border-radius: 16px;
+  padding: 16px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.siteList .addButton .text {
+  color: white;
+}
+.siteList .addButton .icon-wrapper{
+  width: 48px;
+  height: 48px;
+  margin-bottom: 4px;
+  background: #eeeeee;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+.siteList .addButton .icon-wrapper .icon{
+  width: 32px;
+  height: 32px;
+}
+.siteList .site > .close {
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 20px;
+  cursor: default;
+}
+@media (min-width: 500px) {
+  .siteList .site > .close {
+    display: none;
+  }
+  .siteList .site:hover .close {
+    display: block;
+  }
+  .siteList .site:hover .close:hover {
+    background-color: #ccc;
+    border-radius: 50%;
+  }
+}
+.siteList .addButton .add {
+  font-size: 64px;
+  line-height: 64px;
+}
+.siteList .addButton .text {
+  font-size: 14px;
+  text-align: center;
+}
